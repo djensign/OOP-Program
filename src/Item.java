@@ -1,6 +1,8 @@
+//** Step 1 **\\
+
 import java.util.Date;
 
-public interface Item { //**Step 1**\\
+public interface Item {
     public final String manufacturer = "OracleProduction";
     public void setProductionNumber(int productnum);
     public void setName(String name);
