@@ -4,47 +4,55 @@ import java.util.Date;
 
 public abstract class Product implements Item {
 
-    public int serialNumber;
-    public String manufacturer;
-    public Date manufacturedOn;
-    public String name;
+    private int serialNumber;
+    private String manufacturer;
+    private Date manufacturedOn;
+    private String name;
 
-    public int currentProductionNumber =+ 1; // I don't think this is right... (step 3 increment)
+    private int currentProductionNumber = 1;
 
-    @Override
+
+    // Constructor for step 3
+    public Product(int serialNumber, Date manufacturedOn, String name, int currentProductionNumber) {
+        this.serialNumber = serialNumber;
+        this.manufacturedOn = manufacturedOn;
+        this.name = name;
+        this.currentProductionNumber = currentProductionNumber;
+        currentProductionNumber++;
+    }
+
+    @Override // Method for setting the production number/serial number
     public void setProductionNumber(int productnum) {
-
+        serialNumber = productnum;
     }
 
-    @Override
+    @Override // Method for setting the name
     public void setName(String name) {
-
-    }
-
-    public Product(String name) {
         this.name = name;
     }
 
-    @Override
-    public void getName() {
-
+    @Override // Method for returning the name result
+    public String getName() {
+        return name;
     }
 
-    @Override
+    @Override // Method for getting date.
     public Date getManufactureDate() {
-        return null;
+        return manufacturedOn;
     }
 
-    @Override
+    @Override // Method for returning the serial number
     public int getSerialNumber() {
-        return 0;
+        return serialNumber;
     }
 
+
+    //toString statement for end of step 3
     @Override
     public String toString() {
         return "Product{" +
-                ", manufacturer='" + manufacturer + '\'' +
                 "serialNumber=" + serialNumber +
+                ", manufacturer='" + manufacturer + '\'' +
                 ", manufacturedOn=" + manufacturedOn +
                 ", name='" + name + '\'' +
                 '}';
