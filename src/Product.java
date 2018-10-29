@@ -5,7 +5,7 @@ import java.util.Date;
 public abstract class Product implements Item {
 
     private int serialNumber;
-    private String manufacturer;
+    protected String manufacturer;
     private Date manufacturedOn;
     private String name;
 
