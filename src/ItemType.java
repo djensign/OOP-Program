@@ -1,6 +1,6 @@
 //** Step 2 **\\
 
-public enum ItemType {
+enum ItemType {
     AU, VI, AM, VM
     //Audio, Video, AudioMobile, VideoMobile
 }

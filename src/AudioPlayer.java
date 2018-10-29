@@ -1,3 +1,5 @@
+//** Step 5 **\\
+
 public class AudioPlayer extends Product implements MultimediaControl {
 
     private String audioSpecification;
@@ -5,28 +7,34 @@ public class AudioPlayer extends Product implements MultimediaControl {
 
     public AudioPlayer(String name, String audioSpec){
 
-        audioSpecification = audioSpec;
+      audioSpecification = audioSpec;
         mediaType = ItemType.AU;
 
     }
 
     @Override
     public void play() {
-        System.out.println("Playing");
+
+      System.out.println("Playing");
     }
 
     @Override
     public void stop() {
-        System.out.println("Stop");
+
+      System.out.println("Stop");
     }
 
     @Override
     public void previous() {
-        System.out.println("Previous");
+
+      System.out.println("Previous");
     }
 
     @Override
     public void next() {
-        System.out.println("Next");
+
+      System.out.println("Next");
     }
+
+
 }
