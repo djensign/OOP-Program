@@ -1,6 +1,15 @@
 //** Step 2 **\\
 
-enum ItemType {
-    AU, VI, AM, VM
-    //Audio, Video, AudioMobile, VideoMobile
+public enum ItemType {
+  Audio("AU"),
+  Video("VI"),
+  AudioMobile("AM"),
+  VideoMobile("VM");
+
+  public final String code;
+
+  ItemType(String code) {
+    this.code = code;
+  }
+
 }
