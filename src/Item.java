@@ -3,15 +3,15 @@
 import java.util.Date;
 
 public interface Item {
-    public final String manufacturer = "OracleProduction";
+    String manufacturer = "OracleProduction";
 
-    public void setProductionNumber(int productnum);
+    void setProductionNumber(int productnum);
 
-    public void setName(String name);
+    void setName(String name);
 
-    public String getName();
+    String getName();
 
-    public Date getManufactureDate();
+    Date getManufactureDate();
 
-    public int getSerialNumber();
+    int getSerialNumber();
 }

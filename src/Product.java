@@ -5,7 +5,6 @@ import java.util.Date;
 public abstract class Product implements Item {
 
   private int serialNumber;
-  protected String manufacturer;
   private Date manufacturedOn;
   private String name;
 
@@ -13,23 +12,17 @@ public abstract class Product implements Item {
 
 
   // Constructor for step 3
-  public Product(int serialNumber, Date manufacturedOn, String name, int currentProductionNumber) {
-    this.serialNumber = serialNumber;
-    this.manufacturedOn = manufacturedOn;
+  public Product(String name) {
     this.name = name;
-    this.currentProductionNumber = currentProductionNumber;
-    currentProductionNumber++;
   }
 
   @Override // Method for setting the production number/serial number
   public void setProductionNumber(int productnum) {
-
-    serialNumber = productnum;
+    System.out.println(productnum);
   }
 
   @Override // Method for setting the name
   public void setName(String name) {
-
     this.name = name;
   }
 
@@ -41,13 +34,11 @@ public abstract class Product implements Item {
 
   @Override // Method for getting date.
   public Date getManufactureDate() {
-
-    return manufacturedOn;
+    return manufacturedOn = new Date();
   }
 
   @Override // Method for returning the serial number
   public int getSerialNumber() {
-
     return serialNumber;
   }
 
