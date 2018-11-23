@@ -2,12 +2,12 @@
 
 import java.util.Date;
 
-public abstract class Product implements Item {
+public abstract class Product implements Item, Comparable<Product> {
 
   private int serialNumber;
   private String manufacturer = "OracleProduction";
   private Date manufacturedOn;
-   String name;
+  private String name;
 
   private static int currentProductionNumber = 1;
 
@@ -59,4 +59,9 @@ public abstract class Product implements Item {
         "Date : " + manufacturedOn + "\n" +
         "Name : " + name;
   }
+
+  public int compareTo(Product pL){
+    return name.compareTo(pL.name);
+  }
+  //credit to https://stackoverflow.com/questions/18754490/using-compareto-and-collections-sort
 }

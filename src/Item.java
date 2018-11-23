@@ -14,4 +14,6 @@ public interface Item {
     Date getManufactureDate();
 
     int getSerialNumber();
+
+    int compareTo(Product pL);
 }

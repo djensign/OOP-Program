@@ -1,45 +1,46 @@
-//** Given Main **\\
-
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Main {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
-        //testProduct();
-        AudioPlayerDriver.testAudioPlayer();
+        // Write one line of code to create an ArrayList of products
+      ArrayList<Product> products;
+        // Write one line of code to call testCollection and assign the result to the ArrayList
+      products = testCollection();
+        // Write one line of code to sort the ArrayList
+      Collections.sort(products);
+        // Call the print method on the ArrayList
+      print(products);
     }
 
-    public static void testProduct() {
+    // Step 15
+    // Complete the header for the testCollection method here
 
-        Widget w1 = new Widget("Widget 1");
-        System.out.println(w1.toString());
-        Widget w2 = new Widget("Widget 2");
-        System.out.println(w2.toString());
+    public static ArrayList<Product> testCollection() {
 
-        ArrayList<Widget> widgets = new ArrayList<>();
-        widgets.add(w1);
-        widgets.add(new Widget("in add"));
-        widgets.add(new Widget("in add2"));
-
-        for (Widget w : widgets){
-            System.out.println(w.toString());
-        }
-
-        ArrayList<Widget> widgets2 = new ArrayList<>();
-
-        for (ItemType it : ItemType.values()) {
-            System.out.println(it + " " + it.code);
-        }
-
+        AudioPlayer a1 = new AudioPlayer("iPod Mini","MP3");
+        AudioPlayer a2 = new AudioPlayer("Walkman","WAV ");
+        MoviePlayer m1 = new MoviePlayer("DBPOWER MK101",
+            new Screen("720x480", 40, 22), MonitorType.LCD);
+        MoviePlayer m2 = new MoviePlayer("Pyle PDV156BK",
+            new Screen("1366x768", 40, 22), MonitorType.LED);
+      ArrayList<Product> products = new ArrayList<>();
+        // Write one line of code here to create the collection
+        products.add(a1);
+        products.add(a2);
+        products.add(m1);
+        products.add(m2);
+        return products;
     }
 
-}
-
-class Widget extends Product {
-
-    public Widget(String name) {
-        super(name);
+    // Step 16
+    // Create print method here
+    public static void print(List<Product> products) {
+      for (Product p : products) {
+        System.out.println(p);
+      }
     }
-
 }
