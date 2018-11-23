@@ -7,9 +7,9 @@ public abstract class Product implements Item {
   private int serialNumber;
   private String manufacturer = "OracleProduction";
   private Date manufacturedOn;
-  private String name;
+   String name;
 
-  private static int currentProductionNumber = 0;
+  private static int currentProductionNumber = 1;
 
 
   // Constructor for step 3

@@ -9,8 +9,7 @@ public class AudioPlayer extends Product implements MultimediaControl {
       super(name);
       audioSpecification = audioSpec;
       mediaType = ItemType.AUDIO;
-
-    }
+    } //this will display step 6 results
 
     @Override
     public void play() {
@@ -21,7 +20,7 @@ public class AudioPlayer extends Product implements MultimediaControl {
     @Override
     public void stop() {
 
-      System.out.println("Stop");
+      System.out.println("Stopping");
     }
 
     @Override
@@ -36,5 +35,11 @@ public class AudioPlayer extends Product implements MultimediaControl {
       System.out.println("Next");
     }
 
-
+  @Override
+  public String toString() {
+    return
+        super.toString() + '\n' +
+        "Audio Spec : " + audioSpecification + '\n' +
+        "Type : " + mediaType;
+  }
 }
