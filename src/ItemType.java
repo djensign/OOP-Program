@@ -1,10 +1,10 @@
 //** Step 2 **\\
 
 public enum ItemType {
-  Audio("AU"),
-  Video("VI"),
-  Audio_Mobile("AM"),
-  Video_Mobile("VM");
+  AUDIO("AU"),
+  VIDEO("VI"),
+  AUDIO_MOBILE("AM"),
+  VIDEO_MOBILE("VM");
 
   public final String code;
 

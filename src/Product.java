@@ -5,24 +5,29 @@ import java.util.Date;
 public abstract class Product implements Item {
 
   private int serialNumber;
+  private String manufacturer = "OracleProduction";
   private Date manufacturedOn;
   private String name;
 
-  private int currentProductionNumber = 1;
+  private static int currentProductionNumber = 0;
 
 
   // Constructor for step 3
   public Product(String name) {
     this.name = name;
+    manufacturedOn = new Date();
+    serialNumber = currentProductionNumber++;
   }
 
   @Override // Method for setting the production number/serial number
   public void setProductionNumber(int productnum) {
-    System.out.println(productnum);
+
+    currentProductionNumber = productnum;
   }
 
   @Override // Method for setting the name
   public void setName(String name) {
+
     this.name = name;
   }
 
@@ -34,11 +39,13 @@ public abstract class Product implements Item {
 
   @Override // Method for getting date.
   public Date getManufactureDate() {
-    return manufacturedOn = new Date();
+
+    return manufacturedOn;
   }
 
   @Override // Method for returning the serial number
   public int getSerialNumber() {
+
     return serialNumber;
   }
 
@@ -46,11 +53,10 @@ public abstract class Product implements Item {
   //toString statement for end of step 3
   @Override
   public String toString() {
-    return "Product{" +
-        "serialNumber=" + serialNumber +
-        ", manufacturer='" + manufacturer + '\'' +
-        ", manufacturedOn=" + manufacturedOn +
-        ", name='" + name + '\'' +
-        '}';
+    return
+        "Manufacturer : " + manufacturer + "\n" +
+        "Serial Number : " + serialNumber + "\n" +
+        "Date : " + manufacturedOn + "\n" +
+        "Name : " + name;
   }
 }
